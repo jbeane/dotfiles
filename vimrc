@@ -23,7 +23,8 @@ set nobackup         " no thanks I'll restore files I have messed up with git
 set noswapfile       " ditto to above
 set nowb             " another backup thing to disable
 set laststatus=2     " show me that status!
-
+au BufReadPost *.md set syntax=html
+                     " adding html syntax for .md files
 hi Visual cterm=NONE ctermbg=White ctermfg=Black
                      " hightlighting drives me nuts sometimes
 try
