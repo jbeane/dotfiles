@@ -1,4 +1,5 @@
 set nocompatible     " for reasons?
+set number           " gotta see those lines
 set history=1000     " record 1000 lines of mistakes I've made
 set undolevels=1000  " did I mention I make mistakes?
 set ruler            " I likely seeing the ruler
@@ -27,8 +28,6 @@ au BufReadPost *.md set syntax=html
                      " adding html syntax for .md files
 hi Visual cterm=NONE ctermbg=White ctermfg=Black
                      " hightlighting drives me nuts sometimes
-try
- colorscheme desert
- " colorscheme solarized https://github.com/altercation/vim-colors-solarized
-catch
-endtry
+syntax enable
+set background=light
+colorscheme solarized
